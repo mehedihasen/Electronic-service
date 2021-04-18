@@ -30,7 +30,8 @@ const Review = () => {
       };
 
     return (
-        <div>
+        <div className="sty container">
+            <h1 style={{textAlign : "center", margin:"20px"}}> Write you Sweet Comment</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
         <input {...register("name")} value={loginUser.name}/>    
         <br/>

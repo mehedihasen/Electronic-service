@@ -16,11 +16,11 @@ const Booking = () => {
             })
     }, [])
     return (
-        <div>
-            <h1>this is oder list</h1>
+        <div className="container row">
+        <h1 style={{textAlign : "center", margin:"20px"}}> Total List</h1>
             {
                 orderlist.map(od =>  
-                <div className="subcard ">
+                <div className="sty">
                     <table>
                      
                            <tr>

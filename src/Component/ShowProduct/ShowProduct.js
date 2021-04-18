@@ -11,6 +11,7 @@ const ShowProduct = () => {
     }, [])
     return (
         <div className ='continer row'>
+            <h1 style={{textAlign : "center", margin:"20px"}}>Oure Service</h1>
             {
                 product.map(pd => 
                 <div className=" col-md-3 sty ">

@@ -1,6 +1,9 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
+import Addadmin from './Addadmin';
+import Listoder from './Listoder/Listoder';
+import Updatelist from './Updatelist/Updatelist';
 
   const Admin = () => {
     const [image, setImage] = useState(null);
@@ -47,8 +50,10 @@ import { useForm } from "react-hook-form";
 
     }
     return (
-      <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+<div className="row container">
+    <div className="col-md-4 sty">
+    <h1 style={{textAlign : "center", margin:"20px"}}>Add Service</h1>
+    <form onSubmit={handleSubmit(onSubmit)}>
         <input {...register("name")} placeholder="product name"/>
         <br/>
         <input {...register("price")} type="text" defaultValue="$00" />
@@ -59,10 +64,29 @@ import { useForm } from "react-hook-form";
         <input {...register("img")} onBlur={handelImge} type="file" />
         <br/>
       <input type="submit" />
-    </form>
+    </form> 
+    </div>
 
-        
-      </div>
+    <div className="col-md-4 sty">
+    <h1 style={{textAlign : "center", margin:"20px"}}> Add Admin</h1>
+      <Addadmin></Addadmin>
+    </div>
+
+    <div className="col-md-4 sty">
+    <h1 style={{textAlign : "center", margin:"20px"}}> Total List</h1>
+       <Listoder></Listoder> 
+    </div>
+   
+
+   <div className="col-md-4 sty">
+   <h1 style={{textAlign : "center", margin:"20px"}}>Update List</h1>
+     <Updatelist></Updatelist>
+   </div>
+
+
+</div>
+      
+      
     );
   };
   

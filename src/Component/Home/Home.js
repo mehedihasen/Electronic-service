@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Feedback from '../Feedback/Feedback';
+import Fotter from '../Fotter/Fotter';
 import ShowProduct from '../ShowProduct/ShowProduct';
 import Testi from '../Testimonial/Testi';
 import Heder from './Heder/Heder';
@@ -12,8 +14,9 @@ const Home = () => {
            <Heder></Heder>
           <ShowProduct></ShowProduct>
           <Testi></Testi>
-         
-           
+          <Feedback></Feedback>
+          <Fotter></Fotter>
+                 
         </div>
     );
 };

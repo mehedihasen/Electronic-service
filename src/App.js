@@ -10,14 +10,16 @@ import {
 } from "react-router-dom";
 import Home from './Component/Home/Home';
 import Login from './Component/Login/Login';
-import About from './Component/About/Admin';
-import Admin from './Component/About/Admin';
+import About from './Component/Admin/Admin';
+import Admin from './Component/Admin/Admin';
 import ProductDetile from './Component/ProductDetile/ProductDetile';
 import Praivet from './Component/Praivet/Praivet';
 import Book from './Component/Book/Book';
 import Booking from './Component/Booking/Booking';
 import Review from './Component/Review/Review';
 import Testi from './Component/Testimonial/Testi';
+import Addadmin from './Component/Admin/Addadmin';
+import Addminrout from './Component/Adminrout/Addminrout';
 
 export const Contexapi = createContext()
 
@@ -40,10 +42,11 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
+
             <Praivet>
-              <Route path="/admin">
+            <Route path="/admin">
                 <Admin />
-              </Route>
+            </Route> 
               <Route path="/Book">
                 <Book />
               </Route>
@@ -55,9 +58,12 @@ function App() {
               </Route>
               <Route path="/productDetile/:pdname">
                 <ProductDetile />
-              </Route>
-
+              </Route>  
             </Praivet>
+
+            
+           
+              
 
           </Switch>
         </div>

@@ -4,6 +4,7 @@ import { Contexapi } from '../../App';
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './config';
+import "./login.css"
 
 const Login = () => {
     const [loginUser, setLoginUser] = useContext(Contexapi)
