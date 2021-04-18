@@ -1,13 +1,17 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
+import { Link } from 'react-router-dom';
+import { Contexapi } from '../../App';
 import Addadmin from './Addadmin';
 import Listoder from './Listoder/Listoder';
 import Updatelist from './Updatelist/Updatelist';
 
   const Admin = () => {
+    const [loginUser, setLoginUser] = useContext(Contexapi);
     const [image, setImage] = useState(null);
     const { register, handleSubmit, watch, errors } = useForm();
+    const [per, setPer] =useState([])
 
     const onSubmit = data =>{
 
@@ -31,6 +35,18 @@ import Updatelist from './Updatelist/Updatelist';
      })     
     };
 
+    useEffect(() => {
+        fetch(`http://localhost:5000/admin`)
+            .then(res => res.json())
+            .then(data => {
+           const chek  = data.filter(itm => itm.email === loginUser.email)
+           setPer(chek)
+            })
+ 
+    }, [])
+
+    console.log("check here email",per);
+
     const handelImge = event =>{
         console.log(event.target.files[0]);
         const imgData=  new FormData();
@@ -50,8 +66,11 @@ import Updatelist from './Updatelist/Updatelist';
 
     }
     return (
-<div className="row container">
-    <div className="col-md-4 sty">
+<div >
+    {
+      per.length>-1 ? 
+      <div className="row container">
+        <div className="col-md-4 sty">
     <h1 style={{textAlign : "center", margin:"20px"}}>Add Service</h1>
     <form onSubmit={handleSubmit(onSubmit)}>
         <input {...register("name")} placeholder="product name"/>
@@ -82,8 +101,8 @@ import Updatelist from './Updatelist/Updatelist';
    <h1 style={{textAlign : "center", margin:"20px"}}>Update List</h1>
      <Updatelist></Updatelist>
    </div>
-
-
+      </div> : <h1> sorry you not allw here <Link to="/">go back</Link> </h1>
+    }
 </div>
       
       
