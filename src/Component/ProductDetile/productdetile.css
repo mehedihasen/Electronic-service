@@ -1,0 +1,23 @@
+*{
+   margin: 0;
+   padding: 0;
+
+}
+.maine{
+    background-color: #3333ff;
+    height: 500px;
+    border-radius: 20px;
+    color: white;
+    
+}
+
+li .link{
+    color: rgb(253, 252, 252);
+    text-decoration: none;
+    margin: 20px;
+    
+}
+.right{
+    float: right;
+    margin-top: 0;
+}

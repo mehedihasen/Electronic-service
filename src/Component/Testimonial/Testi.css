@@ -1,0 +1,16 @@
+.sty img{
+    border-radius: 50%;
+    margin: 30px;
+}
+ .sty{
+     margin: 50px;
+     padding: 20px;
+     text-align: center;
+     box-shadow: -1px 1px 5px rgb(226, 222, 222) ;
+     border: none;
+
+ }
+ .mine{
+     background-color: rgb(245, 245, 248);
+     height: 100%;
+ }
