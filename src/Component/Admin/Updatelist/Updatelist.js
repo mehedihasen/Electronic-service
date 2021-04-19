@@ -15,8 +15,9 @@ const Updatelist = () => {
     console.log(orderlist);
 
 
-    const hendelDelet = (id) => {
+    const hendelDelet = (id, e) => {
         console.log(id);
+        console.log(e);
       
         fetch(`http://localhost:5000/delete/${id}`, {
             method: 'DELETE'

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Choice from '../Choiec/Choice';
 import Feedback from '../Feedback/Feedback';
 import Fotter from '../Fotter/Fotter';
 import Sidebar from '../Seidebar/Siedbar';
@@ -16,6 +17,7 @@ const Home = () => {
           <ShowProduct></ShowProduct>
           <Testi></Testi>
           <Feedback></Feedback>
+          <Choice></Choice>
           <Fotter></Fotter>
                  
         </div>

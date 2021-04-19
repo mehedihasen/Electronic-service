@@ -14,10 +14,10 @@ const Fotter = () => {
         
              <tr>
                 
-                 <td className="icon"> <FontAwesomeIcon icon={faFacebookF} /></td>
-                 <td className="icon"><FontAwesomeIcon icon={faGoogle} /></td>
-                 <td className="icon"><FontAwesomeIcon icon={faTwitter} /></td>
-                 <td className="icon"><FontAwesomeIcon icon={faInstagram} /></td>
+                 <td className="icon"> <FontAwesomeIcon icon={faFacebookF} style={{fontSize : "40px"}} /></td>
+                 <td className="icon"><FontAwesomeIcon icon={faGoogle}  style={{fontSize : "40px"}}/></td>
+                 <td className="icon"><FontAwesomeIcon icon={faTwitter}  style={{fontSize : "40px"}} /></td>
+                 <td className="icon"><FontAwesomeIcon icon={faInstagram}  style={{fontSize : "40px"}} /></td>
                  
              </tr>
          </table>
