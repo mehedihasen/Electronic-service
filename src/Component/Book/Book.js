@@ -66,10 +66,7 @@ const Book = ({ser}) => {
      </div>
 
             </div>
-          
-            
-       
-       
+ 
         </div>
     );
 };

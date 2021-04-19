@@ -7,12 +7,31 @@ const Updatelist = () => {
     const [orderlist, setOrderlist] = useState([])
  
     useEffect(() => {
-        fetch(`https://serene-river-88706.herokuapp.com/oder`)
+        fetch(`https://serene-river-88706.herokuapp.com/product`)
             .then(res => res.json())
             .then(data => setOrderlist(data))
  
     }, [])
     console.log(orderlist);
+
+
+    const hendelDelet = (id) => {
+        console.log(id);
+      
+        fetch(`http://localhost:5000/delete/${id}`, {
+            method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(result => {
+            console.log(result);
+     
+        })
+    
+    } 
+   
+
+
+
     return (
         <div className="row">
             <div className="col-md-2 col-sm-6 col-12">
@@ -27,7 +46,7 @@ const Updatelist = () => {
                             <td>{od.name}</td>
                             <td>{od.productName}</td>
                             <td>{od.price}</td>
-                            <td> <button>delet</button> </td>
+                            <td> <button onClick={()=>hendelDelet(`${od._id}`)}>delet</button> </td>
                         </tr>
                     </table>
                     )
