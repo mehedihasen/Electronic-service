@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import Payment from '../Peyment/Payment';
 import './book.css'
 import { Contexapi } from '../../App';
+import Sidebar from '../Seidebar/Siedbar';
 
 
 const Book = ({ser}) => {
@@ -26,7 +27,7 @@ const Book = ({ser}) => {
        
       }
       // console.log(image);
-      const url = `http://localhost:5000/oder`;
+      const url = `https://serene-river-88706.herokuapp.com/oder`;
      fetch(url, {
           method:"POST",
           headers:{
@@ -39,9 +40,14 @@ const Book = ({ser}) => {
      })     
     }
     return (
-        <div className="container-fluid row min" >
-            
-        <div className="col-md-8" style={{display: data? "none" : "block"}}>
+        <div className="row" >
+          <div className="col-md-2 col-sm-6 col-12">
+                 <Sidebar></Sidebar>
+            </div>
+           
+            <div className="col-md-5 col-sm-12 col-12 d-flex justify-content-center">
+                 <div className="col-md-8" style={{display: data? "none" : "block"}}>
+       
             <form onSubmit={handleSubmit(onSubmit)}>
         <input {...register("name")} value={loginUser.name}/>    
         <br/>
@@ -59,6 +65,10 @@ const Book = ({ser}) => {
        <Payment handelPayment={handelPay}></Payment> 
      </div>
 
+            </div>
+          
+            
+       
        
         </div>
     );

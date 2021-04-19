@@ -4,7 +4,7 @@ import "./Testi.css"
 const Testi = () => {
     const [Usercommint, setUsercommint] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/review`)
+        fetch(`https://serene-river-88706.herokuapp.com/review`)
             .then(res => res.json())
             .then(data => setUsercommint(data))
     }, [])

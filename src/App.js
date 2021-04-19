@@ -18,8 +18,11 @@ import Book from './Component/Book/Book';
 import Booking from './Component/Booking/Booking';
 import Review from './Component/Review/Review';
 import Testi from './Component/Testimonial/Testi';
-import Addadmin from './Component/Admin/Addadmin';
-import Addminrout from './Component/Adminrout/Addminrout';
+import Addadmin from './Component/Steap/Addadmin';
+import Deshbord from './Component/Deshbord/Deshbord';
+import Updatelist from './Component/Admin/Updatelist/Updatelist';
+import Listoder from './Component/Admin/Listoder/Listoder';
+
 
 export const Contexapi = createContext()
 
@@ -47,8 +50,20 @@ function App() {
             <Route path="/admin">
                 <Admin />
             </Route> 
+            <Route path="/addadmin">
+                <Addadmin />
+            </Route> 
+            <Route path="/updatelist">
+                <Updatelist />
+            </Route> 
+            <Route path="/listoder">
+                <Listoder/>
+            </Route> 
               <Route path="/Book">
                 <Book />
+              </Route>
+              <Route path="/deshbord">
+                <Deshbord />
               </Route>
               <Route path="/Booking">
                 <Booking />

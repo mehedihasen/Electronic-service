@@ -1,31 +1,43 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Contexapi } from '../../../App';
+import Sidebar from '../../Seidebar/Siedbar';
 
 const Listoder = () => {
     const [loginUser, setLoginUser] = useContext(Contexapi)
     const [orderlist, setOrderlist] = useState([])
  
     useEffect(() => {
-        fetch(`http://localhost:5000/oder`)
+        fetch(`https://serene-river-88706.herokuapp.com/oder`)
             .then(res => res.json())
             .then(data => setOrderlist(data))
  
     }, [])
     console.log(orderlist);
     return (
-        <div>
-            {
+        <div className="container row">
+          
+        
+      
+      {
                 orderlist.map(od =>
-                    <table>
-                        <tr>
-                            <td>{od.name}</td>
-                            <td>{od.productName}</td>
-                            <td>{od.price}</td>
-                            <td>Status</td>
-                        </tr>
-                    </table>
+               
+                 <div>
+                        <table >
+                      
+                      <tr className="sty">
+                      <td>{od.name}</td>
+                        <td>{od.productName}</td>
+                        <td>{od.price}</td>
+                        <td>Status</td>
+                      </tr>
+                   
+                </table>
+                 </div>
+                
                     )
             }
+     
+       
         </div>
     );
 };

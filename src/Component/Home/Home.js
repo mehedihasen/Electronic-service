@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Feedback from '../Feedback/Feedback';
 import Fotter from '../Fotter/Fotter';
+import Sidebar from '../Seidebar/Siedbar';
 import ShowProduct from '../ShowProduct/ShowProduct';
 import Testi from '../Testimonial/Testi';
 import Heder from './Heder/Heder';
