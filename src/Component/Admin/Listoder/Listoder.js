@@ -15,6 +15,8 @@ const Listoder = () => {
     console.log(orderlist);
     return (
         <div className="container row">
+
+<h1 style={{ textAlign: "center", margin: "20px" }}> Product List</h1>
           
         
       
@@ -22,13 +24,12 @@ const Listoder = () => {
                 orderlist.map(od =>
                
                  <div>
-                        <table >
-                      
-                      <tr className="sty">
-                      <td>{od.name}</td>
+                    <table >
+                      <tr>
+                        <td>{od.name}</td>
                         <td>{od.productName}</td>
                         <td>{od.price}</td>
-                        <td>Status</td>
+                        <td>Done</td>
                       </tr>
                    
                 </table>

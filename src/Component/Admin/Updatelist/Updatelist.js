@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Contexapi } from '../../../App';
 import Sidebar from '../../Seidebar/Siedbar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Updatelist = () => {
     const [loginUser, setLoginUser] = useContext(Contexapi)
@@ -29,6 +31,7 @@ const Updatelist = () => {
         })
     
     } 
+    console.log("oder list updste" , orderlist);
    
 
 
@@ -39,19 +42,35 @@ const Updatelist = () => {
                  <Sidebar></Sidebar>
             </div>
            
-            <div className="col-md-5 col-sm-12 col-12 d-flex justify-content-center">
-                      {
+            <div className="col-md-10 col-sm-12 col-12 d-flex justify-content-center sec">
+
+            
+                   <div>
+                       <h1 style={{ textAlign: "center", margin: "20px" }}> Update Product</h1>
+                   {
                 orderlist.map(od =>
+              
                     <table>
+                    <tr>
+                    
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Modify</th>
+                    </tr>
                         <tr>
-                            <td>{od.name}</td>
+                          
                             <td>{od.productName}</td>
                             <td>{od.price}</td>
-                            <td> <button onClick={()=>hendelDelet(`${od._id}`)}>delet</button> </td>
-                        </tr>
+                            <td> <button onClick={()=>hendelDelet(`${od._id}`)} style={{border:"none"}}>  <FontAwesomeIcon icon={faTrashAlt}  style={{fontSize :"20px"}} /></button> </td>
+                         
+                        </tr> 
+                         
                     </table>
+                
+                    
                     )
             }
+                   </div>
             </div>
          
       

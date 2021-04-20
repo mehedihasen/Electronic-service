@@ -14,7 +14,7 @@ import About from './Component/Admin/Admin';
 import Admin from './Component/Admin/Admin';
 import ProductDetile from './Component/ProductDetile/ProductDetile';
 import Praivet from './Component/Praivet/Praivet';
-import Book from './Component/Book/Book';
+import Book from './Component/Admin/Book/Book';
 import Booking from './Component/Booking/Booking';
 import Review from './Component/Review/Review';
 import Testi from './Component/Testimonial/Testi';

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import Book from '../Book/Book';
+import Book from '../Admin/Book/Book';
 import "./productdetile.css"
 
 

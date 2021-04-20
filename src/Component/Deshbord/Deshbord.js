@@ -31,14 +31,18 @@ const Dashboard = () => {
                     <Sidebar></Sidebar>
                 </div>
                 {
-                    per.length>0 ?   <div className="col-md-5 col-sm-12 col-12 d-flex justify-content-center">
-                    <Listoder></Listoder>
-                </div>   :
+                    per.length>0 ?   
+                <div className="col-md-10 col-sm-12 col-12 d-flex justify-content-center sec">
+                     <Listoder></Listoder>
+                </div> 
+                  : 
                 
-                <div className="col-md-5 col-sm-12 col-12 d-flex justify-content-center">
+                  <div className="col-md-10 col-sm-12 col-12 d-flex justify-content-center sec">
                     <Booking></Booking>
                 </div>
-                }
+                     
+                
+                } 
 
                
                  

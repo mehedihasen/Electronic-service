@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from "react-hook-form";
-import Payment from '../Peyment/Payment';
+import Payment from '../../Peyment/Payment';
 import './book.css'
-import { Contexapi } from '../../App';
-import Sidebar from '../Seidebar/Siedbar';
+import { Contexapi } from '../../../App';
+import Sidebar from '../../Seidebar/Siedbar';
 
 
 const Book = ({ser}) => {
@@ -46,7 +46,7 @@ const Book = ({ser}) => {
             </div>
            
             <div className="col-md-5 col-sm-12 col-12 d-flex justify-content-center">
-                 <div className="col-md-8" style={{display: data? "none" : "block"}}>
+        <div className="col-md-8 sec" style={{display: data? "none" : "block"}}>
        
             <form onSubmit={handleSubmit(onSubmit)}>
         <input {...register("name")} value={loginUser.name}/>    

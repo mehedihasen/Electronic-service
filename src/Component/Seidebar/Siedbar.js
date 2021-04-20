@@ -37,9 +37,10 @@ const Sidebar = () => {
                         <FontAwesomeIcon icon={faHome} /> <span>Home</span>
                     </Link>
                 </li>
-                {/* {isDoctor &&  */}
+            
                 
-                {per.length > 0 ?  <div>
+            {per.length > 0 ? 
+                 <div>
 
                     <li>
                         <Link to="/addadmin" className="text-white">
@@ -64,7 +65,9 @@ const Sidebar = () => {
                     </li>
                  
 
-                </div>   :   <div>
+                </div>
+                    :  
+                     <div>
                     
                     <li>
                         <Link to="/deshbord" className="text-white" >
@@ -81,15 +84,12 @@ const Sidebar = () => {
                             <FontAwesomeIcon icon={faUserPlus} /> <span>Book New One u</span>
                         </Link>
                     </li>
-                    {/* <li>
-                        <Link to="/doctor/setting" className="text-white" >
-                            <FontAwesomeIcon icon={faCog} /> <span>Settings</span>
-                        </Link>
-                    </li> */}
-                </div>  } 
+               
+                </div> 
+                 } 
                 
                 
-                {/* } */}
+                  
             </ul>
             <div>
                 <Link to="/" className="text-white"><FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span></Link>

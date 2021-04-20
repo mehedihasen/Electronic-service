@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Contexapi } from '../../App';
-import Sidebar from '../Seidebar/Siedbar';
+import './booking.css'
 
 const Booking = () => {
     const [loginUser, setLoginUser] = useContext(Contexapi)
@@ -12,30 +12,28 @@ const Booking = () => {
             .then(data => {
                 const oder = data.filter(od=> od.name === loginUser.name)
                 setOrderlist(oder)
-                console.log(oder);
+              
                 
             })
     }, [])
     return (
-        <div className="row">
+        <div className="row container">
 
         <h1 style={{textAlign : "center", margin:"20px"}}> Total List</h1>
        
             {
                 orderlist.map(od =>  
-                <div className="sty">
+             
                     <table>
-                     
-                           <tr>
-                           <td><h3>ProducName :- {od.productName}</h3> </td> 
-                            <td> <h3>price :- {od.price}</h3></td> 
-                            <td>  <h3>Ststus: Pending</h3></td>
-                           </tr>
-                            
-                        
+               
+                    <tr>
+                           <td> {od.productName} </td> 
+                            <td>{od.price}</td> 
+                            <td> Pending</td>
+                    </tr>
                     </table>
         
-                </div>)
+                )
             }
         </div>
     );

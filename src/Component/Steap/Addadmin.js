@@ -32,8 +32,9 @@ const Addadmin = () => {
             <div className="col-md-2 col-sm-6 col-12">
                  <Sidebar></Sidebar>
             </div>
-           
-            <div className="col-md-5 col-sm-12 col-12 d-flex justify-content-center">
+           <h1 style={{textAlign : "center"}}>Add a new admin</h1>
+            <div className="col-md-10 col-sm-12 col-12 d-flex justify-content-center sec">
+            
 
            
   <form onSubmit={handleSubmit(onSubmit)}>

@@ -73,7 +73,7 @@ import Updatelist from './Updatelist/Updatelist';
                  <Sidebar></Sidebar>
   </div>
            
-            <div className="col-md-5 col-sm-12 col-12 d-flex justify-content-center">
+            <div className="col-md-10 col-sm-12 col-12 d-flex justify-content-center sec">
 
               
         <div className="col-md-4 ">

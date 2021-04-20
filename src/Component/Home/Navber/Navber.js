@@ -14,9 +14,7 @@ const Navber = () => {
         <li class="nav-item ms-5">
            <a class="nav-link active" aria-current="page" href="/Home">Home</a>
         </li>
-        <li class="nav-item ms-5">
-           <a class="nav-link active" aria-current="page" href="/Admin">Admin</a>
-        </li>
+   
         <li class="nav-item ms-5">
            <a class="nav-link active" aria-current="page" href="/Deshbord">Deshbord</a>
         </li>

@@ -5,7 +5,7 @@ import { faFileAlt } from '@fortawesome/free-regular-svg-icons'
 
 const Choice = () => {
     return (
-        <div className="continer row" style={{backgroundColor:"cyan"}}>
+        <div className="continer row" style={{backgroundColor:""}}>
         <h1 style={{textAlign : "center"}}>Why people are Choosing us</h1>
         <div className="sty col-md-3">
             {/* <img src='' alt="" style={{width : "150px"}}/> */}

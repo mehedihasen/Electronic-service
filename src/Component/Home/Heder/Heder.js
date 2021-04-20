@@ -4,7 +4,7 @@ import hederimg from "../../../image/heder.jpg"
 const Heder = () => {
     return (
         <div class="row justify-content-evenly">
-    <div class="col-4 mt-5">
+    <div class="col-md-4 mt-5">
       <h1 style={{color:"purple"}}>WELCOME </h1>
       <h1 style={{color: "red"}}>OUR SERVICE</h1>
       <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus illo obcaecati iure rerum quis ea! 
@@ -12,7 +12,7 @@ const Heder = () => {
 
     </div>
 
-    <div class="col-4">
+    <div class="col-md-4">
       <img src={hederimg} alt=""/>
     </div>
   </div>
