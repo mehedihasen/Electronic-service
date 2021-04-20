@@ -26,7 +26,8 @@ const Updatelist = () => {
         })
         .then(res => res.json())
         .then(result => {
-            console.log(result);
+           const out = orderlist.filter(od => od._id !== id)
+           setOrderlist(out)
      
         })
     
